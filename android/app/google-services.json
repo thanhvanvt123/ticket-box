@@ -1,0 +1,137 @@
+{
+  "project_info": {
+    "project_number": "909294907428",
+    "project_id": "ticketboxlogin",
+    "storage_bucket": "ticketboxlogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909294907428:android:097ce47be26db0c160e8b1",
+        "android_client_info": {
+          "package_name": "com.example.gtk_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909294907428-ob32gu1h3726854q5c1lr94ti9no1fgh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7I4azp8FEXDhOBFx7fwAEEKi18q0T1QI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909294907428-ob32gu1h3726854q5c1lr94ti9no1fgh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909294907428:android:242ba5a80c1d86fe60e8b1",
+        "android_client_info": {
+          "package_name": "com.example.logingooglefirebasedemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909294907428-c6c3r5uqm0u2kdve8t6ibr764pvpvnij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.logingooglefirebasedemo",
+            "certificate_hash": "d178fb4df2a7e1d0649a14cd5e50052c44fee432"
+          }
+        },
+        {
+          "client_id": "909294907428-ob32gu1h3726854q5c1lr94ti9no1fgh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7I4azp8FEXDhOBFx7fwAEEKi18q0T1QI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909294907428-ob32gu1h3726854q5c1lr94ti9no1fgh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909294907428:android:254687406d10b5e560e8b1",
+        "android_client_info": {
+          "package_name": "com.example.ticketboxdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909294907428-21lq8qni6pi50k062e818kibftdpkrse.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ticketboxdemo",
+            "certificate_hash": "d178fb4df2a7e1d0649a14cd5e50052c44fee432"
+          }
+        },
+        {
+          "client_id": "909294907428-5sumuct4nje6h13mac94uhtlv0uaufn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ticketboxdemo",
+            "certificate_hash": "630d481ca8b7a7368b476bfc6308984950fbc10e"
+          }
+        },
+        {
+          "client_id": "909294907428-73g4pepnag4srs6f9crso6ketjccnv30.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ticketboxdemo",
+            "certificate_hash": "bf3c330628f55d8cb5fca9bea77a1c44187c722e"
+          }
+        },
+        {
+          "client_id": "909294907428-qipbrcjqdidgrtsl7ff1m308vlh5uaq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ticketboxdemo",
+            "certificate_hash": "d44f00f8c5e1e6bf1e89b5d567f0ad113c44743e"
+          }
+        },
+        {
+          "client_id": "909294907428-ob32gu1h3726854q5c1lr94ti9no1fgh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7I4azp8FEXDhOBFx7fwAEEKi18q0T1QI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909294907428-ob32gu1h3726854q5c1lr94ti9no1fgh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

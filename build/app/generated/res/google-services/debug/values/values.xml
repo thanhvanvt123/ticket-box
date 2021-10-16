@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">909294907428-ob32gu1h3726854q5c1lr94ti9no1fgh.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">909294907428</string>
+    <string name="google_api_key" translatable="false">AIzaSyA7I4azp8FEXDhOBFx7fwAEEKi18q0T1QI</string>
+    <string name="google_app_id" translatable="false">1:909294907428:android:254687406d10b5e560e8b1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA7I4azp8FEXDhOBFx7fwAEEKi18q0T1QI</string>
+    <string name="google_storage_bucket" translatable="false">ticketboxlogin.appspot.com</string>
+    <string name="project_id" translatable="false">ticketboxlogin</string>
+</resources>
