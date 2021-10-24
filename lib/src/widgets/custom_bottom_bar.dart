@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:ticket_box/src/common/themes.dart';
 import 'package:ticket_box/src/routes/routes.dart';
 import 'package:ticket_box/src/services/global_states/shared_states.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
@@ -18,17 +19,14 @@ class BottomItem extends SalomonBottomBarItem {
   final String route;
   final String text;
   final Icon icon;
-  final Color color;
 
   BottomItem({
     required this.route,
     required this.text,
     required this.icon,
-    this.color = Colors.blueAccent,
   }) : super(
     title: Text(text),
-    icon: icon,
-    selectedColor: color,
+    icon: icon
   );
 }
 
@@ -36,18 +34,18 @@ final items = [
   BottomItem(
     text: 'Home',
     icon: Icon(Icons.home),
-    route: Routes.home,
+    route: Routes.home
   ),
   BottomItem(
     text: 'Accounts',
     icon: Icon(Icons.manage_accounts),
-    route: Routes.home,
+    route: Routes.home
   ),
   
   BottomItem(
     text: 'Profile',
     icon: Icon(Icons.person),
-    route: Routes.profile,
+    route: Routes.profile
   ),
 ];
 
@@ -58,16 +56,19 @@ class CustomBottombar extends GetView<CustomBottombarController> {
       return Container(
         decoration: BoxDecoration(
           color: Colors.white,
-          border: Border.all(color: Colors.grey.shade300),
+          //border: Border.all(color: Colors.grey.shade300),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.shade200,
+              color: secondary_color,
               blurRadius: 4.0,
               offset: Offset(0, 0),
             ),
           ],
         ),
         child: SalomonBottomBar(
+          // selectedColorOpacity: 0.8,
+          selectedItemColor: accent_green,
+          unselectedItemColor: Colors.black54,
           currentIndex: controller.states.bottomBarSelectedIndex.value,
           onTap: (i) => controller.changeSelected(i),
           items: items,

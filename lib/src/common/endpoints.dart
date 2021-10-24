@@ -1,5 +1,5 @@
 class Endpoints {
-  static const String apiVer = "api";
+  static const String apiVer = "http://52.139.194.125/api";
   static const String apiVer1 = "api/v1.0";
   static const todos = "todos";
 
@@ -14,5 +14,13 @@ class Endpoints {
 
   /// Refresh token endpoint version /api/v1
   static const refreshToken = '$apiVer1/auth/refresh-token';
+
+  /// Event enpoint version /api/v1
+  static const events = '$apiVer/events';
+
+
+   /// Group(club) enpoint version /api/v1
+  static const groups = '$apiVer/GroupInformations';
+
 
 }

@@ -35,9 +35,10 @@ class LoginEmailController extends GetxController {
       );
 
       UserCredential result = await FirebaseAuth.instance.signInWithCredential(credential);
-      print('hello: '+ result.user.toString());
+      print('Hello: '+ result.user.toString());
       if (result.user != null) {
-        BotToast.showText(text: "Đăng nhập thành công");
+        
+        BotToast.showText(text: 'Hello: '+ result.user!.displayName.toString());
         Get.toNamed(Routes.home);
       }
     } catch (e) {

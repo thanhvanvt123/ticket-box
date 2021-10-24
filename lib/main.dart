@@ -15,6 +15,7 @@ import 'package:ticket_box/src/pages/update_infomation_signup/views/update_profi
 import 'package:ticket_box/src/routes/app_pages.dart';
 import 'package:ticket_box/src/routes/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:ticket_box/src/common/themes.dart';
 
 void main() async {
   AppInit.init();
@@ -27,16 +28,30 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     return GetMaterialApp(
       title: Strings.appName,
       builder: BotToastInit(),
-      theme: ThemeData(fontFamily: Fonts.montserrat),
+      theme: ThemeData(
+          fontFamily: Fonts.montserrat,
+          primaryColor: Colors.white,
+          secondaryHeaderColor: secondary_color,
+          accentColor: accent_green,
+          backgroundColor: dark_background,
+          textTheme: TextTheme(
+              button: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black87,
+                  fontSize: 16),
+              bodyText1: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white),
+              subtitle1: TextStyle(fontSize: 14, color: secondary_color))),
+      
       navigatorObservers: [BotToastNavigatorObserver()],
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.login,
       getPages: AppPages.routes,
     );
-
   }
 }
