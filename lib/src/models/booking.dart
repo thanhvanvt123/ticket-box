@@ -1,35 +1,64 @@
-import 'package:json_annotation/json_annotation.dart';
-import 'package:ticket_box/src/models/account.dart';
+import 'dart:convert';
 
-part 'booking.g.dart';
+import 'package:ticket_box/src/models/event.dart';
+import 'package:ticket_box/src/models/paymentMethod.dart';
+import 'package:ticket_box/src/models/ticket.dart';
 
-@JsonSerializable()
 class Booking {
-  final int? bookingId, quantity,paymentMethodId;
-  final String? userId;
-  final double? total;
-  final bool? isSuccess;
-  final DateTime? createDate;
-  final Account? user;
-  // final PaymentMethod? paymentMethod;
-  // final Ticket? ticket;
+  
+    Booking({
+        this.bookingId,
+        this.userId,
+        this.quantity,
+        this.total,
+        this.isSuccess,
+        this.createDate,
+        this.paymentMethodId,
+        this.eventId
+    });
 
+    int? bookingId;
+    int? userId;
+    int? quantity;
+    double? total;
+    bool? isSuccess;
+    DateTime? createDate;
+    int? paymentMethodId;
+    int? eventId;
 
-  factory Booking.fromJson(Map<String, dynamic> json) =>
-      _$BookingFromJson(json);
+    Event? event;
+    String? eventName;
+    PaymentMethod? paymentMethod;
+    List<Ticket>? tickets;
 
-  Booking({
-    this.bookingId,
-    this.userId,
-    this.total,
-    this.quantity,
-    this.paymentMethodId,
-    this.createDate,
-    this.isSuccess,
-    this.user,
-    // this.paymentMethod,
-    // this.ticket
-  });
+    factory Booking.fromRawJson(String str) => Booking.fromJson(json.decode(str));
 
-  Map<String, dynamic> toJson() => _$BookingToJson(this);
+    String toRawJson() => json.encode(toJson());
+
+     Booking.fromJson(Map<String, dynamic> json) {
+        bookingId= json["bookingId"];
+        userId= json["userId"];
+        quantity= json["quantity"];
+        total= json["total"];
+        isSuccess= json["isSuccess"];
+        createDate= DateTime.parse(json["createDate"]);
+        paymentMethodId= json["paymentMethodId"];
+        eventId= json["eventId"];
+
+        event= json["event"] == null ? null : Event.fromJson(json["event"]);
+        eventName = event == null ? null : event!.eventName;
+        paymentMethod= json["paymentMethod"] == null ? null : PaymentMethod.fromJson(json["paymentMethod"]);
+        tickets= json["tickets"] == null ? null : List<Ticket>.from(json["tickets"].map((x) => Ticket.fromJson(x)));
+    }
+
+    Map<String, dynamic> toJson() => {
+        "bookingId": bookingId,
+        "userId": userId,
+        "quantity": quantity,
+        "total": total,
+        "isSuccess": isSuccess,
+        "createDate": createDate!.toIso8601String(),
+        "paymentMethodId": paymentMethodId,
+        "eventId": eventId
+    };
 }
