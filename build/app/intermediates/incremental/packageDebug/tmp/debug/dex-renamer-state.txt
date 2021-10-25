@@ -1,7 +1,7 @@
-#Sat Oct 16 09:08:01 GMT+07:00 2021
-base.1=D\:\\PRM\\Project\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
+#Mon Oct 25 02:42:53 ICT 2021
+base.1=E\:\\srcPRM\\ticket-box\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
 path.1=classes2.dex
-base.0=D\:\\PRM\\Project\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+base.0=E\:\\srcPRM\\ticket-box\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
 path.0=classes.dex

@@ -1,6 +1,4 @@
-import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:ticket_box/src/models/account.dart';
 import 'package:ticket_box/src/services/global_states/shared_states.dart';

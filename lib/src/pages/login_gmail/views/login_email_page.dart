@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:ticket_box/src/common/themes.dart';
 import 'package:ticket_box/src/pages/login_gmail/controllers/login_gmail_controller.dart';
 import 'package:ticket_box/src/routes/routes.dart';
 import 'package:ticket_box/src/services/global_states/shared_states.dart';
@@ -19,11 +20,9 @@ class LoginEmailPage extends GetView<LoginEmailController> {
               width: screenSize.width,
               height: screenSize.height,
               fit: BoxFit.cover,
-              image:
-              AssetImage('assets/images/login-background.jpg')),
-
+              image: AssetImage('assets/images/login-background.jpg')),
           Container(
-            margin: EdgeInsets.only(top: 310),
+            margin: EdgeInsets.only(top: 150),
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -35,11 +34,17 @@ class LoginEmailPage extends GetView<LoginEmailController> {
                     },
                     child: GestureDetector(
                       child: Container(
+                        //halt
+                        //Add borderRadius
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: Colors.white,
+                        ),
                         height: 45,
                         padding: EdgeInsets.symmetric(
                           horizontal: 15,
                         ),
-                        color: Colors.white,
+                        //color: Colors.white,
                         child: Row(
                           children: <Widget>[
                             Icon(
@@ -50,8 +55,7 @@ class LoginEmailPage extends GetView<LoginEmailController> {
                             SizedBox(width: 30),
                             Text(
                               'Đăng nhập với Google',
-                              style: TextStyle(
-                                  color: Colors.black87, fontSize: 16),
+                              style: Theme.of(context).textTheme.button,
                             ),
                           ],
                         ),
@@ -65,11 +69,15 @@ class LoginEmailPage extends GetView<LoginEmailController> {
                     },
                     child: GestureDetector(
                       child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: Colors.white,
+                        ),
                         height: 45,
                         padding: EdgeInsets.symmetric(
                           horizontal: 15,
                         ),
-                        color: Colors.white,
+                        //color: Colors.white,
                         child: Row(
                           children: <Widget>[
                             Icon(
@@ -80,8 +88,7 @@ class LoginEmailPage extends GetView<LoginEmailController> {
                             SizedBox(width: 30),
                             Text(
                               'Đăng nhập với số điện thoại',
-                              style: TextStyle(
-                                  color: Colors.black87, fontSize: 16),
+                              style: Theme.of(context).textTheme.button,
                             ),
                           ],
                         ),
