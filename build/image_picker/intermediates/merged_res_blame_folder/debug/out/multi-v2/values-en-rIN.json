@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\PRM\\Project\\build\\image_picker\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
+            "outputFile": "D:\\PRM\\ticketbox\\ticket-box\\build\\image_picker\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\AVITA\\.gradle\\caches\\transforms-2\\files-2.1\\3c8fd1bfddb99a7a7e21faa1397acdb4\\core-1.1.0\\res\\values-en-rIN\\values-en-rIN.xml",
@@ -16,7 +16,7 @@
             ]
         },
         {
-            "outputFile": "D:\\PRM\\Project\\build\\image_picker\\intermediates\\res\\merged\\debug\\values-en-rIN\\values-en-rIN.xml",
+            "outputFile": "D:\\PRM\\ticketbox\\ticket-box\\build\\image_picker\\intermediates\\res\\merged\\debug\\values-en-rIN\\values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\AVITA\\.gradle\\caches\\transforms-2\\files-2.1\\3c8fd1bfddb99a7a7e21faa1397acdb4\\core-1.1.0\\res\\values-en-rIN\\values-en-rIN.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\PRM\\Project\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ko\\values-ko.xml",
+            "outputFile": "D:\\PRM\\ticketbox\\ticket-box\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ko\\values-ko.xml",
             "map": [
                 {
                     "source": "C:\\Users\\AVITA\\.gradle\\caches\\transforms-2\\files-2.1\\0813e45a0b3806629b40dbeb70c75a60\\jetified-play-services-base-17.1.0\\res\\values-ko\\values.xml",

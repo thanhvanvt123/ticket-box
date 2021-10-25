@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\PRM\\Project\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\PRM\\ticketbox\\ticket-box\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\PRM\\Project\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\PRM\\ticketbox\\ticket-box\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

@@ -4,9 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ticket_box/src/routes/routes.dart';
+import 'package:ticket_box/src/services/global_states/shared_states.dart';
 
 class LoginPhoneController extends GetxController {
   TextEditingController otpController = TextEditingController();
+  final SharedStates sharedStates = Get.find();
   FirebaseAuth _auth = FirebaseAuth.instance;
 
   /// Code send to verify
@@ -53,6 +55,7 @@ class LoginPhoneController extends GetxController {
         setCodeVerify(verificationId);
         setPhone(phone);
         BotToast.closeAllLoading();
+        sharedStates.phoneLogin.value = phoneNumber.value;
         Get.toNamed(Routes.phoneVerify);
       },
       codeAutoRetrievalTimeout: (verificationId) async {},
@@ -64,8 +67,7 @@ class LoginPhoneController extends GetxController {
         verificationId: codeVerifile.value, smsCode: code);
     try {
       BotToast.showLoading();
-      final authCredential =
-          await _auth.signInWithCredential(phoneAuthCredential);
+      final authCredential = await _auth.signInWithCredential(phoneAuthCredential);
       if (authCredential.user != null) {
         BotToast.showText(
           text: "Verification Success",

@@ -1,4 +1,6 @@
 import 'package:bot_toast/bot_toast.dart';
+import 'dart:io';
+
 import 'package:ticket_box/src/services/api/account_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -7,6 +9,8 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:ticket_box/src/routes/routes.dart';
 import 'package:ticket_box/src/services/global_states/shared_states.dart';
+import 'package:path/path.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 class UpdateProfileController extends GetxController {
   final SharedStates sharedStates = Get.find();
@@ -19,93 +23,72 @@ class UpdateProfileController extends GetxController {
   Future<void> getImage() async {
     final picked = await _imagePicker.pickImage(source: ImageSource.gallery);
     filePath.value = picked?.path ?? '';
+    uploadFile(File(picked!.path));
   }
 
   // User login with phone
   User? user;
 
-  // password of visitor
-  final password = "".obs;
+  // email
+  final newEmail = "".obs;
 
-  // set password
-  void setPassword(String pass) {
-    password.value = pass;
+  // set email
+  void setEmail(String email) {
+    newEmail.value = email;
   }
 
-  // RePassword of visitor
-  final rePassword = "".obs;
-
-  // set rePassword
-  void setRePassword(String RePass) {
-    rePassword.value = RePass;
-  }
-
-  // userName of visitor
+  // userName
   final userName = "".obs;
 
   // set userName
   void setUserName(String name) {
     userName.value = name;
   }
-
-  // Image of visitor
-  final image = "".obs;
-
-  // set userName
-  void setImage(String imageUrl) {
-    image.value = imageUrl;
+  var urlImageUpload = "".obs;
+  Future uploadFile(File file) async {
+    if (file == null) return;
+    final fileName = basename(file.path);
+    try {
+      UploadTask task = FirebaseStorage.instance.ref().child('uploads/$fileName').putFile(file);
+      if (task == null) {
+        return null;
+      };
+      final snapshot = await task.whenComplete(() {});
+      final urlDownload = await snapshot.ref.getDownloadURL();
+      urlImageUpload.value = urlDownload;
+      print('Download-Link: $urlDownload');
+    } on FirebaseException catch (e) {
+      print('lỗi: ' + e.toString());
+    }
   }
 
-  // Show password
-  final isShowPass = true.obs;
-
-  // Change show password
-  void changeShowPass() {
-    isShowPass.value = !isShowPass.value;
-  }
-
-  // Show Repassword
-  final isRePass = true.obs;
-
-  // Change show Repassword
-  void changeShowRePass() {
-    isRePass.value = !isRePass.value;
-  }
-
-  void checkRePassword() async {
-    if (userName.value.isNotEmpty &&
-        password.value.isNotEmpty &&
-        rePassword.value.isNotEmpty &&
-        filePath.isNotEmpty) {
+  void updateUser() async {
+    DateTime applyDate = DateTime.now();
+    if (userName.value.isNotEmpty && newEmail.value.isNotEmpty && filePath.isNotEmpty) {
       BotToast.showLoading();
-       if (password.value == rePassword.value) {
-      //   int id = AuthServices.userLoggedIn.value.id!;
-      //   bool result = await accountService.updateProfile(
-      //     id,
-      //     {
-      //       "name": userName.value,
-      //       "password": password.value,
-      //     },
-      //     filePath.value,
-      //   );
-      bool result = true;
-        if (result) {
+      var createResult = await accountService.createAccount(
+          {
+            "roleId": '2',
+            "email": newEmail.value,
+            "fullname": userName.value,
+            "phone": sharedStates.phoneLogin.value,
+            "isDeleted": 'false',
+            "avatarUrl": urlImageUpload.value ,
+            "createDate": applyDate.toString(),
+            "modifyDate": applyDate.toString(),
+          });
+        if (createResult != null ) {
           BotToast.showText(
-            text: "Sign Up Success",
+            text: "Đăng ký thành công",
             duration: const Duration(seconds: 4),
           );
+          sharedStates.account = createResult;
           Get.toNamed(Routes.home);
         }
-      } else {
-        BotToast.showText(
-            text: "Your passord not match ! Please try again",
-            textStyle: TextStyle(fontSize: 16),
-            duration: const Duration(seconds: 7));
-      }
       BotToast.closeAllLoading();
     } else {
       BotToast.showText(
-          text: "Required Information!",
+          text: "Tất cả thông tin cần điền!",
           textStyle: TextStyle(fontSize: 16),
           duration: const Duration(seconds: 5));
     }

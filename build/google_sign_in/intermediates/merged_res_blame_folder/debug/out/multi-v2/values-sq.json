@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\PRM\\Project\\build\\google_sign_in\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sq\\values-sq.xml",
+            "outputFile": "D:\\PRM\\ticketbox\\ticket-box\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\values-sq\\values-sq.xml",
             "map": [
                 {
                     "source": "C:\\Users\\AVITA\\.gradle\\caches\\transforms-2\\files-2.1\\66428797ab0c933e357826e6e3beb9af\\jetified-play-services-base-16.0.1\\res\\values-sq\\values.xml",
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "outputFile": "D:\\PRM\\Project\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\values-sq\\values-sq.xml",
+            "outputFile": "D:\\PRM\\ticketbox\\ticket-box\\build\\google_sign_in\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sq\\values-sq.xml",
             "map": [
                 {
                     "source": "C:\\Users\\AVITA\\.gradle\\caches\\transforms-2\\files-2.1\\66428797ab0c933e357826e6e3beb9af\\jetified-play-services-base-16.0.1\\res\\values-sq\\values.xml",
