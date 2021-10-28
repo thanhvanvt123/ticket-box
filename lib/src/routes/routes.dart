@@ -7,4 +7,5 @@ class Routes {
   static const String phoneVerify = "/phoneVerify";
   static const String updateProfile = "/updateProfile";
   static const String notifications = "/notifications";
+  static const String bookings = "/bookings";
 }

@@ -19,11 +19,9 @@ class LoginEmailPage extends GetView<LoginEmailController> {
               width: screenSize.width,
               height: screenSize.height,
               fit: BoxFit.cover,
-              image:
-              AssetImage('assets/images/login-background.jpg')),
-
+              image: AssetImage('assets/images/login-background.jpg')),
           Container(
-            margin: EdgeInsets.only(top: 310),
+            margin: EdgeInsets.only(top: 150),
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -35,11 +33,14 @@ class LoginEmailPage extends GetView<LoginEmailController> {
                     },
                     child: GestureDetector(
                       child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15))),
                         height: 45,
                         padding: EdgeInsets.symmetric(
                           horizontal: 15,
                         ),
-                        color: Colors.white,
                         child: Row(
                           children: <Widget>[
                             Icon(
@@ -50,8 +51,7 @@ class LoginEmailPage extends GetView<LoginEmailController> {
                             SizedBox(width: 30),
                             Text(
                               'Đăng nhập với Google',
-                              style: TextStyle(
-                                  color: Colors.black87, fontSize: 16),
+                              style: Theme.of(context).textTheme.button,
                             ),
                           ],
                         ),
@@ -69,7 +69,10 @@ class LoginEmailPage extends GetView<LoginEmailController> {
                         padding: EdgeInsets.symmetric(
                           horizontal: 15,
                         ),
-                        color: Colors.white,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15))),
                         child: Row(
                           children: <Widget>[
                             Icon(
@@ -80,8 +83,7 @@ class LoginEmailPage extends GetView<LoginEmailController> {
                             SizedBox(width: 30),
                             Text(
                               'Đăng nhập với số điện thoại',
-                              style: TextStyle(
-                                  color: Colors.black87, fontSize: 16),
+                              style: Theme.of(context).textTheme.button,
                             ),
                           ],
                         ),

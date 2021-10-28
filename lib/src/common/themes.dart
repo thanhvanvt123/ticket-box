@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 const accent_green = Color(0xFF33AB7B);
 const accent_green_tint = Color(0xf0286053);
-const dark_background = Color(0xFF22343C);
+const dark_background = Color(0xFF1F2E35);
 const float_element_color = Color(0xFF30444E);
 const secondary_color = Color(0xFF96A7AF);
+const dark_green_50percent = Color(0xa0286053);
 
 class MyAppTheme {
   static ThemeData appThemeData() {

@@ -37,6 +37,10 @@ dependencies:
   firebase_core: ^1.4.0
   pin_code_fields: ^7.3.0
   firebase_storage: ^10.0.6
+  fw_ticket: ^0.1.1
+  cupertino_icons:
+  numberpicker: ^2.1.1
+  
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +55,8 @@ dev_dependencies:
   flutter_signin_button: ^2.0.0
   rxdart:
   getwidget:
+  flutter_ticket_widget: ^0.0.1
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

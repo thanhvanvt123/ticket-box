@@ -57,7 +57,7 @@ class LoginEmailController extends GetxController {
 
       if(createResult != null){
         sharedStates.account = createResult;
-        BotToast.showText(text: "Đăng nhập thành công");
+        BotToast.showText(text: "Hello ${account!.fullName}");
         Get.toNamed(Routes.home);
       }
     } catch (e) {

@@ -110,6 +110,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "clip_shadow",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/clip_shadow-0.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "clock",
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0",
       "packageUri": "lib/",
@@ -142,6 +148,12 @@
     {
       "name": "crypto",
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "cupertino_icons",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -248,6 +260,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_ticket_widget",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_ticket_widget-0.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "flutter_web_plugins",
       "rootUri": "file:///D:/Flutter/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
@@ -258,6 +276,12 @@
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-9.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "fw_ticket",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/fw_ticket-0.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "get",
@@ -350,6 +374,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "infinite_listview",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/infinite_listview-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "intl",
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
       "packageUri": "lib/",
@@ -400,6 +430,12 @@
     {
       "name": "mime",
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/mime-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "numberpicker",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/numberpicker-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -590,7 +626,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-25T17:03:31.112826Z",
+  "generated": "2021-10-28T13:43:57.822531Z",
   "generator": "pub",
   "generatorVersion": "2.15.0-172.0.dev"
 }

@@ -14,6 +14,8 @@ import 'package:ticket_box/src/pages/profile_detail/views/profile_detail_page.da
 import 'package:ticket_box/src/pages/update_infomation_signup/bindings/update_profile_binding.dart';
 import 'package:ticket_box/src/pages/update_infomation_signup/views/update_profile_page.dart';
 import 'package:ticket_box/src/routes/routes.dart';
+import 'package:ticket_box/src/pages/booking/bindings/booking_binding.dart';
+import 'package:ticket_box/src/pages/booking/views/booking_page.dart';
 
 class AppPages {
   static final routes = [
@@ -53,5 +55,8 @@ class AppPages {
       page: () => UpdateProfilePage(),
       binding: UpdateProfileBinding(),
     ),
+    GetPage(name: Routes.bookings, 
+    page: () => BookingPage(),
+    binding: BookingBinding(),)
   ];
 }
