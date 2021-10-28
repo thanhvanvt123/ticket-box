@@ -83,6 +83,7 @@ class UpdateProfileController extends GetxController {
             duration: const Duration(seconds: 4),
           );
           sharedStates.account = createResult;
+          print("hello: " + createResult.toString());
           Get.toNamed(Routes.home);
         }
       BotToast.closeAllLoading();

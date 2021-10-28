@@ -7,6 +7,7 @@ class SharedStates extends GetxService {
 
   // User login in app
   Account? account;
-  final phoneLogin = "".obs;
 
+  final phoneLogin = "".obs;
+  final phoneUpdate = "".obs; 
 }

@@ -24,7 +24,8 @@ class ProfileDetailController extends GetxController {
     profileName.value = content;
   }
 
-  final profilePhone = "".obs;
+  final profilePhone = "".obs; 
+  
 
   void changePhone(String content) {
     profilePhone.value = content;
@@ -71,12 +72,14 @@ class ProfileDetailController extends GetxController {
         profilePhone.value = "";
       }
     }
+    
     if(profileName.value.isEmpty){
       profileName.value = userInfo!.fullName!;
     }
     if(urlImageUpload.value.isEmpty){
       urlImageUpload.value = userInfo!.avatarUrl!;
     }
+    
     bool updateS = false;
       updateS = await _service.updateProfile(accountId,
         {
@@ -97,6 +100,11 @@ class ProfileDetailController extends GetxController {
           text: "Cập nhật thành công !",
           textStyle: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
           duration: const Duration(seconds: 5));
+          Account getCurrent = Account(
+            userId: userInfo!.userId, avatarUrl: urlImageUpload.value, email: userInfo!.email!, fullName: profileName.value,
+            phone: profilePhone.value ,roleId: 2,isDeleted: false,createDate: userInfo!.createDate, modifyDate: applyDate
+          ); 
+          sharedData.account = getCurrent; // gán lại giá trị login
       Get.toNamed(Routes.profile);
     }else{
       BotToast.showText(

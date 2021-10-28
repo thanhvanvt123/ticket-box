@@ -41,6 +41,7 @@ class LoginPhoneController extends GetxController {
               text: "Bạn đã thử nhiều lần, vui lòng thử lại sau !",
               textStyle: TextStyle(fontSize: 16),
               duration: const Duration(seconds: 7));
+          BotToast.closeAllLoading();
         }
         if (verificationFailed.message!.contains(
             "phone numbers are written in the format [+][country code][subscriber number including area code]")) {
