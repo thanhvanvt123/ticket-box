@@ -61,7 +61,7 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
                             fit: BoxFit.cover,
                             image: Utils.resolveFileImg(
                               filePath,
-                              "assets/images/profile.png",
+                              "assets/images/fpt-logo.jpg",
                             ),
                           ),
                         ),
