@@ -21,12 +21,13 @@ class Utils {
 
   static ImageProvider<Object> resolveFileImg(String? url, String? altUrl) {
     if ((url == null || url.isEmpty) && (altUrl == null || altUrl.isEmpty)) {
-      throw Exception("Required file image or alternative image");
+      // throw Exception("Required file image or alternative image");
+      return AssetImage("assets/images/404.png");
     }
-    if (url != null && url.isNotEmpty) {
+    if (url != null && url.isNotEmpty) { 
       return FileImage(File(url));
     }
-    return AssetImage(altUrl!);
+    return NetworkImage(altUrl!);
   }
 
   static ImageProvider<Object> resolveNetworkImg(String? url, String? altUrl) {
