@@ -32,16 +32,23 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: Strings.appName,
       builder: BotToastInit(),
+      color: accent_green,
       theme: ThemeData(
+        
+        scaffoldBackgroundColor: dark_background,
         primaryColor: Colors.white,
         secondaryHeaderColor: secondary_color,
         accentColor: accent_green,
         backgroundColor: dark_background,
         textTheme: TextTheme(
+          headline1: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.bold),
+          headline2: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w700),
           button: TextStyle(fontWeight: FontWeight.w500,color: Colors.black87, fontSize: 16),
             bodyText1: TextStyle(
                 fontSize: 18, fontWeight: FontWeight.w500, color: Colors.white),
-            subtitle1: TextStyle(fontSize: 14, color: secondary_color)
+            subtitle1: TextStyle(fontSize: 14, color: secondary_color),
+            subtitle2: TextStyle(fontSize: 16, color: secondary_color),
+            bodyText2: TextStyle(fontSize: 14, color: Colors.white, fontWeight: FontWeight.w300)
         )
     ),
       navigatorObservers: [BotToastNavigatorObserver()],

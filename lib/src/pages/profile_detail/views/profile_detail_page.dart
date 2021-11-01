@@ -2,15 +2,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:ticket_box/src/common/themes.dart';
 import 'package:ticket_box/src/models/account.dart';
 import 'package:ticket_box/src/pages/profile_detail/controllers/profile_detail_controller.dart';
 import 'package:ticket_box/src/services/global_states/shared_states.dart';
 import 'package:ticket_box/src/utils/utils.dart';
 
-
 class ProfileDetailPage extends GetView<ProfileDetailController> {
-  
-    final SharedStates sharedData = Get.find();
+  final SharedStates sharedData = Get.find();
   // final user = FirebaseAuth.instance.currentUser!;
   bool showPassword = false;
 
@@ -21,23 +20,23 @@ class ProfileDetailPage extends GetView<ProfileDetailController> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff2AD4D3),
+        backgroundColor: accent_green,
         centerTitle: true,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: Colors.black,
-          ),
-          onPressed: () {
-            Get.back();
-          },
-        ),
+        // leading: IconButton(
+        //   icon: Icon(
+        //     Icons.arrow_back_ios,
+        //     color: Colors.black,
+        //   ),
+        //   onPressed: () {
+        //     Get.back();
+        //   },
+        // ),
         elevation: 1,
         title: Column(
           children: [
             Text(
               'Update Infomation',
-              style: TextStyle(color: Colors.black87),
+              style: Theme.of(context).textTheme.bodyText1,
             ),
           ],
         ),
@@ -57,13 +56,16 @@ class ProfileDetailPage extends GetView<ProfileDetailController> {
                     Obx(() {
                       String filePath = controller.filePath.value;
                       return Container(
-                            width: 100,
-                            height: 100,
-                        // width: screenSize.width*0.3,
-                        //   height: screenSize.height*0.2,
+                          width: 100,
+                          height: 100,
+                          // width: screenSize.width*0.3,
+                          //   height: screenSize.height*0.2,
                           margin: EdgeInsets.only(top: 20),
                           decoration: BoxDecoration(
-                              border: Border.all(width: 4, color: Theme.of(context).scaffoldBackgroundColor),
+                              border: Border.all(
+                                  width: 4,
+                                  color: Theme.of(context)
+                                      .scaffoldBackgroundColor),
                               boxShadow: [
                                 BoxShadow(
                                     spreadRadius: 2,
@@ -74,10 +76,11 @@ class ProfileDetailPage extends GetView<ProfileDetailController> {
                               shape: BoxShape.circle,
                               image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: Utils.resolveFileImg(filePath, user!.avatarUrl.toString(),
+                                image: Utils.resolveFileImg(
+                                  filePath,
+                                  user!.avatarUrl.toString(),
                                 ),
-                              ))
-                      );
+                              )));
                     }),
                     Positioned(
                         bottom: 0,
@@ -91,9 +94,10 @@ class ProfileDetailPage extends GetView<ProfileDetailController> {
                               shape: BoxShape.circle,
                               border: Border.all(
                                 width: 4,
-                                color: Theme.of(context).scaffoldBackgroundColor,
+                                color:
+                                    Theme.of(context).scaffoldBackgroundColor,
                               ),
-                              color: Colors.green,
+                              color: accent_green,
                             ),
                             child: Icon(
                               Icons.camera_alt,
@@ -112,16 +116,14 @@ class ProfileDetailPage extends GetView<ProfileDetailController> {
                 child: Padding(
                   padding: EdgeInsets.all(10),
                   child: TextFormField(
-                    onChanged: (value){
+                    onChanged: (value) {
                       controller.changeName(value);
                     },
                     initialValue: user!.fullName.toString(),
                     decoration: InputDecoration(
                         contentPadding: EdgeInsets.only(bottom: 3),
                         labelText: 'Name',
-                        labelStyle: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold,color: Colors.black
-                        ),
+                        labelStyle: Theme.of(context).textTheme.bodyText1,
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         hintStyle: TextStyle(
                           fontSize: 16,
@@ -141,9 +143,7 @@ class ProfileDetailPage extends GetView<ProfileDetailController> {
                     decoration: InputDecoration(
                         contentPadding: EdgeInsets.only(bottom: 3),
                         labelText: 'Email',
-                        labelStyle: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold,color: Colors.black
-                        ),
+                        labelStyle: Theme.of(context).textTheme.bodyText1,
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         hintStyle: TextStyle(
                           fontSize: 16,
@@ -158,16 +158,16 @@ class ProfileDetailPage extends GetView<ProfileDetailController> {
                 child: Padding(
                   padding: EdgeInsets.all(10),
                   child: TextFormField(
-                    onChanged: (value){
+                    onChanged: (value) {
                       controller.changePhone(value);
                     },
-                    initialValue: (user.phone.toString().endsWith('ull')) ? '': user.phone.toString() ,
+                    initialValue: (user.phone.toString().endsWith('ull'))
+                        ? ''
+                        : user.phone.toString(),
                     decoration: InputDecoration(
                         contentPadding: EdgeInsets.only(bottom: 3),
                         labelText: 'Phone',
-                        labelStyle: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold,color: Colors.black
-                        ),
+                        labelStyle: Theme.of(context).textTheme.bodyText1,
                         hintStyle: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -180,53 +180,39 @@ class ProfileDetailPage extends GetView<ProfileDetailController> {
                 height: 35,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  GestureDetector(
-                    onTap: (){
-                      Get.back();
-                    },
-                    child: Container(
-                      height: 50,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 63,
-                          vertical: 13,
-                        ),
-                        child: Text(
-                          "Cancel",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.black.withOpacity(0.7), fontSize: 20),
-                        ),
+                  Container(
+                    width: screenSize.width*0.4,
+                    height: 50,                    
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.white24),
+                      onPressed: () {
+                        Get.back();
+                      },
+                      child: Text(
+                        "Cancel",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
-                      decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(4)),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: (){
-                      controller.updateProfile(user.userId!);
-                    },
-                    child: Container(
-                      // width: MediaQuery.of(context).size.width * 0.6,
-                      height: 50,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 63,
-                          vertical: 13,
-                        ),
-                        child: Text(
-                          "Save",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
-                        ),
+                  Container(
+                    width: screenSize.width*0.4,
+                    height: 50,                    
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: accent_green),
+                      onPressed: () {
+                        controller.updateProfile(user.userId!);
+                      },
+                      child: Text(
+                        "Save",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
-                      decoration: BoxDecoration(
-                          color: Color(0xff2AD4D3),
-                          borderRadius: BorderRadius.circular(4)),
                     ),
                   ),
+                  
                 ],
               ),
             ],
@@ -236,4 +222,3 @@ class ProfileDetailPage extends GetView<ProfileDetailController> {
     );
   }
 }
-

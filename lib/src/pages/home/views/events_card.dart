@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:ticket_box/src/common/themes.dart';
 import 'package:ticket_box/src/models/event.dart';
 import 'package:ticket_box/src/pages/home/views/event_details_page.dart';
+import 'package:pretty_qr_code/pretty_qr_code.dart';
 
 class EventCard extends StatelessWidget {
   Event event;
@@ -21,10 +22,7 @@ class EventCard extends StatelessWidget {
                   event: event,
                 )));
       },
-      // child: Text(
-      //   "Send",
-      //   style: TextStyle(color: Colors.white, fontSize: 20),
-      // ),
+      
       child: Container(
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
         width: size.width - 2 * 10, //padding = 10

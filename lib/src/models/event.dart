@@ -67,8 +67,8 @@ class Event {
     paymentMethodId= json["paymentMethodId"];
 
 
-    group = Group.fromJson(json["group"]);
-    groupName = group!.groupName;
+    group = json["group"] == null ? null : Group.fromJson(json["group"]);
+    groupName = group == null ? null : group!.groupName;
     tickets= json["tickets"] == null ? null : List<Ticket>.from(json["tickets"].map((x) => Ticket.fromJson(x)));
     numberOfTickets = tickets!.length;
     bookings= json["bookings"] == null ? null : List<Booking>.from(json["bookings"].map((x) => Booking.fromJson(x)));
@@ -101,6 +101,12 @@ int compareDate(DateTime? timeOccur, d2) {
   //DateTime d1 = DateTime.parse(timeOccur!);
   //final formatter = DateFormat('dd/MM/yyyy');
   return timeOccur!.compareTo(d2);
+}
+
+String parseDate2(String? datetime) {
+  DateTime dt = DateTime.parse(datetime!);
+  String formattedDate = DateFormat('hh:mm dd MMM, yyyy').format(dt);
+  return formattedDate;
 }
 
 class Events {

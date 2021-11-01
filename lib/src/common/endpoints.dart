@@ -8,11 +8,18 @@ class Endpoints {
   /// Account enpoint version /api/v1
   static const accounts = '$apiVer/UserInformations';
 
-   /// Account enpoint version /api/v1
+   /// Events enpoint version /api/v1
   static const events = '$apiVer/Events';
 
-   /// Account enpoint version /api/v1
+   /// GroupInformations enpoint version /api/v1
   static const groups = '$apiVer/GroupInformations';
+
+  
+   /// Bookings enpoint version /api/v1
+  static const bookings = '$apiVer/Bookings';
+
+     /// Tickets enpoint version /api/v1
+  static const tickets = '$apiVer/Tickets';
 
 
   /// Login via firebase endpoint version /api/v1

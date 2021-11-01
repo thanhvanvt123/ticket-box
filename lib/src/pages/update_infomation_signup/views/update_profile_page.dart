@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:ticket_box/src/common/constants.dart';
+import 'package:ticket_box/src/common/themes.dart';
 import 'package:ticket_box/src/pages/update_infomation_signup/controllers/update_profile_controller.dart';
 import 'package:ticket_box/src/services/global_states/shared_states.dart';
 import 'package:ticket_box/src/utils/utils.dart';
@@ -162,7 +163,7 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
                 child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(Color(0xffFF6F66)),
+                        MaterialStateProperty.all(accent_green),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),

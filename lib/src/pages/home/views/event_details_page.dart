@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:ticket_box/src/common/themes.dart';
 import 'package:ticket_box/src/models/event.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:ticket_box/src/pages/booking/views/booking_page.dart';
 
 class EventDetails extends StatelessWidget {
   Event event;
@@ -12,13 +14,11 @@ class EventDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final isOccured = (compareDate(event.timeOccur, DateTime.now()) == 0)
-        ? true
-        : false;
+    final isOccured =
+        (compareDate(event.timeOccur, DateTime.now()) == 0) ? true : false;
     try {
       return Scaffold(
         backgroundColor: dark_background,
-        
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -66,21 +66,16 @@ class EventDetails extends StatelessWidget {
                               color: Colors.white,
                               fontWeight: FontWeight.w500),
                         ),
-                        
                         SizedBox(
                           height: 30,
                         ),
                         Text(
-                          (isOccured)
-                              ? 'On going 🔥'
-                              : 'Up coming 💣'
-                                  , 
+                          (isOccured) ? 'On going 🔥' : 'Up coming 💣',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                       
                         SizedBox(
                           height: 5,
                         ),
@@ -138,9 +133,15 @@ class EventDetails extends StatelessWidget {
                           FontAwesomeIcons.angleDoubleRight,
                           size: 15,
                         ),
-                       
+                        /******************
+                       BOOK TICKET HEREEEEEE
+                       *****************/
+                       //đang còn navigate bằng tay :> gắn route vô giúp nhó
                         onPressed: () {
-                          //view post in campaign
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => BookingPage(
+                                    event: event,
+                                  )));
                         },
                       ),
                     )),
@@ -155,10 +156,7 @@ class EventDetails extends StatelessWidget {
                 lineHeight: 7,
                 percentage: 0.3,
                 backgroundColor: secondary_color,
-                progressBarColor:
-                    ( isOccured)
-                        ? Colors.orange
-                        : accent_green,
+                progressBarColor: (isOccured) ? Colors.orange : accent_green,
               ),
               Container(
                 padding: EdgeInsets.all(20),
@@ -169,7 +167,8 @@ class EventDetails extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            event.numberOfTickets.toString() + ' TICKET SOLD', //number of post
+                            event.numberOfTickets.toString() +
+                                ' TICKET SOLD', //number of post
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 22,
@@ -187,24 +186,26 @@ class EventDetails extends StatelessWidget {
                         ],
                       ),
                       Row(children: [
-                      Text(
-                        'over 100 limited tickets',
-                        style: TextStyle(color: secondary_color), //number of post
-                      ),
-                      Expanded(child: SizedBox()),
-                      Text(
-                        'booked',
-                        style: TextStyle(color: secondary_color), //number of post
-                      ),
+                        Text(
+                          'over 100 limited tickets',
+                          style: TextStyle(
+                              color: secondary_color), //number of post
+                        ),
+                        Expanded(child: SizedBox()),
+                        Text(
+                          'booked',
+                          style: TextStyle(
+                              color: secondary_color), //number of post
+                        ),
                       ]),
                       SizedBox(
                         height: 20,
                       ),
-                     
                       Text(
                         'Location:',
                         textAlign: TextAlign.left,
-                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.white),
                       ),
                       SizedBox(
                         height: 10,
@@ -219,7 +220,8 @@ class EventDetails extends StatelessWidget {
                       Text(
                         'Description:',
                         textAlign: TextAlign.left,
-                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.white),
                       ),
                       SizedBox(
                         height: 10,
@@ -317,6 +319,6 @@ class EventDetails extends StatelessWidget {
       return Center(
         child: CircularProgressIndicator(),
       );
+    }
   }
-}
 }

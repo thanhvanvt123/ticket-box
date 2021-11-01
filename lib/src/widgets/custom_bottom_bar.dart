@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:ticket_box/src/common/themes.dart';
 import 'package:ticket_box/src/routes/routes.dart';
 import 'package:ticket_box/src/services/global_states/shared_states.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
@@ -18,17 +19,14 @@ class BottomItem extends SalomonBottomBarItem {
   final String route;
   final String text;
   final Icon icon;
-  final Color color;
 
   BottomItem({
     required this.route,
     required this.text,
     required this.icon,
-    this.color = Colors.blueAccent,
   }) : super(
     title: Text(text),
     icon: icon,
-    selectedColor: color,
   );
 }
 
@@ -39,9 +37,9 @@ final items = [
     route: Routes.home,
   ),
   BottomItem(
-    text: 'Accounts',
-    icon: Icon(Icons.manage_accounts),
-    route: Routes.home,
+    text: 'Transactions',
+    icon: Icon(Icons.local_attraction_rounded),
+    route: Routes.transaction,
   ),
   
   BottomItem(
@@ -57,8 +55,8 @@ class CustomBottombar extends GetView<CustomBottombarController> {
     return Obx(() {
       return Container(
         decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(color: Colors.grey.shade300),
+          color: float_element_color,
+          border: Border.all(color: float_element_color),
           boxShadow: [
             BoxShadow(
               color: Colors.grey.shade200,
@@ -68,6 +66,8 @@ class CustomBottombar extends GetView<CustomBottombarController> {
           ],
         ),
         child: SalomonBottomBar(
+          selectedItemColor: accent_green,
+          unselectedItemColor: secondary_color,
           currentIndex: controller.states.bottomBarSelectedIndex.value,
           onTap: (i) => controller.changeSelected(i),
           items: items,
