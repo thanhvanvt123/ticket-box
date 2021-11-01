@@ -120,8 +120,13 @@ file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-3.1.2/lib/
 firebase_core
 2.12
+<<<<<<< HEAD
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.7.0/
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.7.0/lib/
+=======
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.8.0/
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.8.0/lib/
+>>>>>>> vanlt
 firebase_core_platform_interface
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-4.0.1/
@@ -130,6 +135,21 @@ firebase_core_web
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.1.0/
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.1.0/lib/
+<<<<<<< HEAD
+=======
+firebase_storage
+2.12
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-10.0.6/
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-10.0.6/lib/
+firebase_storage_platform_interface
+2.12
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage_platform_interface-4.0.4/
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage_platform_interface-4.0.4/lib/
+firebase_storage_web
+2.12
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage_web-3.0.4/
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage_web-3.0.4/lib/
+>>>>>>> vanlt
 fixnum
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/fixnum-1.0.0/
@@ -206,6 +226,13 @@ image_picker_platform_interface
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_platform_interface-2.4.1/
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_platform_interface-2.4.1/lib/
+<<<<<<< HEAD
+=======
+infinite_listview
+2.12
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/infinite_listview-1.1.0/
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/infinite_listview-1.1.0/lib/
+>>>>>>> vanlt
 intl
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/
@@ -242,6 +269,13 @@ mime
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/mime-1.0.0/
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/mime-1.0.0/lib/
+<<<<<<< HEAD
+=======
+numberpicker
+2.12
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/numberpicker-2.1.1/
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/numberpicker-2.1.1/lib/
+>>>>>>> vanlt
 package_config
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/package_config-2.0.2/
@@ -266,6 +300,13 @@ pool
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pool-1.5.0/
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pool-1.5.0/lib/
+<<<<<<< HEAD
+=======
+pretty_qr_code
+2.12
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pretty_qr_code-2.0.2/
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pretty_qr_code-2.0.2/lib/
+>>>>>>> vanlt
 pub_semver
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pub_semver-2.1.0/
@@ -274,6 +315,13 @@ pubspec_parse
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pubspec_parse-1.1.0/
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pubspec_parse-1.1.0/lib/
+<<<<<<< HEAD
+=======
+qr
+2.12
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/qr-2.1.0/
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/qr-2.1.0/lib/
+>>>>>>> vanlt
 quiver
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-3.0.1/
@@ -298,6 +346,13 @@ shelf_web_socket
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/shelf_web_socket-1.0.1/
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/shelf_web_socket-1.0.1/lib/
+<<<<<<< HEAD
+=======
+solid_bottom_sheet
+2.12
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/solid_bottom_sheet-0.1.10/
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/solid_bottom_sheet-0.1.10/lib/
+>>>>>>> vanlt
 source_gen
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/source_gen-1.0.3/
@@ -334,6 +389,13 @@ test_api
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.3/
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.3/lib/
+<<<<<<< HEAD
+=======
+ticket_material
+2.12
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/ticket_material-0.3.1/
+file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/ticket_material-0.3.1/lib/
+>>>>>>> vanlt
 timing
 2.12
 file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/timing-1.0.0/

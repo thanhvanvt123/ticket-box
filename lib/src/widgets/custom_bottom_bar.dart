@@ -26,7 +26,11 @@ class BottomItem extends SalomonBottomBarItem {
     required this.icon,
   }) : super(
     title: Text(text),
+<<<<<<< HEAD
     icon: icon
+=======
+    icon: icon,
+>>>>>>> vanlt
   );
 }
 
@@ -37,9 +41,15 @@ final items = [
     route: Routes.home
   ),
   BottomItem(
+<<<<<<< HEAD
     text: 'Accounts',
     icon: Icon(Icons.manage_accounts),
     route: Routes.home
+=======
+    text: 'Transactions',
+    icon: Icon(Icons.local_attraction_rounded),
+    route: Routes.transaction,
+>>>>>>> vanlt
   ),
   
   BottomItem(
@@ -55,8 +65,13 @@ class CustomBottombar extends GetView<CustomBottombarController> {
     return Obx(() {
       return Container(
         decoration: BoxDecoration(
+<<<<<<< HEAD
           color: Colors.white,
           //border: Border.all(color: Colors.grey.shade300),
+=======
+          color: float_element_color,
+          border: Border.all(color: float_element_color),
+>>>>>>> vanlt
           boxShadow: [
             BoxShadow(
               color: secondary_color,
@@ -66,9 +81,14 @@ class CustomBottombar extends GetView<CustomBottombarController> {
           ],
         ),
         child: SalomonBottomBar(
+<<<<<<< HEAD
           // selectedColorOpacity: 0.8,
           selectedItemColor: accent_green,
           unselectedItemColor: Colors.black54,
+=======
+          selectedItemColor: accent_green,
+          unselectedItemColor: secondary_color,
+>>>>>>> vanlt
           currentIndex: controller.states.bottomBarSelectedIndex.value,
           onTap: (i) => controller.changeSelected(i),
           items: items,

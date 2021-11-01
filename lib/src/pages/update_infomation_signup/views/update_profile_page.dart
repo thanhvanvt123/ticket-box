@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:ticket_box/src/common/constants.dart';
+import 'package:ticket_box/src/common/themes.dart';
 import 'package:ticket_box/src/pages/update_infomation_signup/controllers/update_profile_controller.dart';
 import 'package:ticket_box/src/services/global_states/shared_states.dart';
 import 'package:ticket_box/src/utils/utils.dart';
@@ -61,7 +62,7 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
                             fit: BoxFit.cover,
                             image: Utils.resolveFileImg(
                               filePath,
-                              "assets/images/profile.png",
+                              "assets/images/fpt-logo.jpg",
                             ),
                           ),
                         ),
@@ -99,7 +100,7 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
                 height: 48,
                 margin: EdgeInsets.only(top: 60, right: 20, left: 20),
                 child: TextField(
-                  onSubmitted: (value) {
+                  onChanged: (value) {
                     controller.setUserName(value);
                   },
                   decoration: InputDecoration(
@@ -114,88 +115,55 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
                       )),
                   //controller: phoneController,
                 ),
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(4)),
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(4)),
               ),
-              Obx(() {
-                return Container(
+               Container(
                   height: 48,
                   margin: EdgeInsets.only(top: 15, right: 20, left: 20),
-                  child: TextField(
-                    onSubmitted: (value) {
-                      controller.setPassword(value);
-                    },
-                    obscureText: controller.isShowPass.value ? true : false,
+                  child: TextFormField(
+                    enabled: false,
+                    initialValue: sharedStates.phoneLogin.value,
                     decoration: InputDecoration(
                       border: new OutlineInputBorder(
                           borderSide: new BorderSide(
                               color: Colors.grey.withOpacity(0.6))),
-                      suffixIcon: IconButton(
-                        onPressed: () {
-                          controller.changeShowPass();
-                        },
-                        icon: Icon(
-                          Icons.remove_red_eye,
-                          color: controller.isShowPass.value
-                              ? Colors.grey
-                              : Colors.blue,
-                        ),
-                      ),
                       prefixIcon: Icon(
-                        Icons.vpn_key_outlined,
+                        Icons.phone,
                         color: Colors.grey,
                       ),
-                      hintText: 'New Password',
+                      hintText: 'Your Phone',
                       hintStyle: TextStyle(color: Colors.black45),
                     ),
                   ),
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(4)),
-                );
-              }),
-              Obx(() {
-                return Container(
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(4)),
+                ),
+                Container(
                   height: 48,
                   margin: EdgeInsets.only(top: 15, right: 20, left: 20),
                   child: TextField(
-                    onSubmitted: (value) {
-                      controller.setRePassword(value);
+                    onChanged: (value) {
+                      controller.setEmail(value);
                     },
-                    obscureText: controller.isRePass.value ? true : false,
                     decoration: InputDecoration(
                       border: new OutlineInputBorder(
-                          borderSide: new BorderSide(
-                              color: Colors.grey.withOpacity(0.6))),
-                      suffixIcon: IconButton(
-                        onPressed: () {
-                          controller.changeShowRePass();
-                        },
-                        icon: Icon(
-                          Icons.remove_red_eye,
-                          color: controller.isRePass.value
-                              ? Colors.grey
-                              : Colors.blue,
-                        ),
-                      ),
+                          borderSide: new BorderSide(color: Colors.grey.withOpacity(0.6))),
                       prefixIcon: Icon(
-                        Icons.vpn_key_outlined,
+                        Icons.email,
                         color: Colors.grey,
                       ),
-                      hintText: 'Re-type password',
+                      hintText: 'Your Email',
                       hintStyle: TextStyle(color: Colors.black45),
                     ),
                   ),
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(4)),
-                );
-              }),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(4)),
+                ),
               Container(
                 margin: EdgeInsets.only(top: 35, right: 20, left: 20),
                 height: 46,
                 child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(AppColors.primary),
+                        MaterialStateProperty.all(accent_green),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
@@ -203,7 +171,7 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
                     ),
                   ),
                   onPressed: () {
-                    controller.checkRePassword();
+                    controller.updateUser();
                   },
                   child: Text(
                     'SAVE',

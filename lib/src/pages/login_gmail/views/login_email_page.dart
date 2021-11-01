@@ -34,17 +34,27 @@ class LoginEmailPage extends GetView<LoginEmailController> {
                     },
                     child: GestureDetector(
                       child: Container(
+<<<<<<< HEAD
                         //halt
                         //Add borderRadius
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                           color: Colors.white,
                         ),
+=======
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15))),
+>>>>>>> vanlt
                         height: 45,
                         padding: EdgeInsets.symmetric(
                           horizontal: 15,
                         ),
+<<<<<<< HEAD
                         //color: Colors.white,
+=======
+>>>>>>> vanlt
                         child: Row(
                           children: <Widget>[
                             Icon(
@@ -77,7 +87,14 @@ class LoginEmailPage extends GetView<LoginEmailController> {
                         padding: EdgeInsets.symmetric(
                           horizontal: 15,
                         ),
+<<<<<<< HEAD
                         //color: Colors.white,
+=======
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15))),
+>>>>>>> vanlt
                         child: Row(
                           children: <Widget>[
                             Icon(

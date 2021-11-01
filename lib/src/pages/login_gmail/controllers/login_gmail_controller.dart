@@ -4,12 +4,17 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:ticket_box/src/models/account.dart';
 import 'package:ticket_box/src/routes/routes.dart';
+import 'package:ticket_box/src/services/api/account_service.dart';
 import 'package:ticket_box/src/services/global_states/shared_states.dart';
 
 class LoginEmailController extends GetxController {
   // Share states across app
   final SharedStates sharedStates = Get.find();
+  IAccountService _accountService = Get.find();
+  // User login in app
+  Account? account;
 
   GoogleSignIn? _googleSignIn;
 
@@ -22,6 +27,7 @@ class LoginEmailController extends GetxController {
   }
 
   void loginWithGoogle() async {
+    DateTime applyDate = DateTime.now();
     try {
       BotToast.showLoading();
       _googleSignIn = GoogleSignIn();
@@ -35,10 +41,30 @@ class LoginEmailController extends GetxController {
       );
 
       UserCredential result = await FirebaseAuth.instance.signInWithCredential(credential);
+<<<<<<< HEAD
       print('Hello: '+ result.user.toString());
       if (result.user != null) {
         
         BotToast.showText(text: 'Hello: '+ result.user!.displayName.toString());
+=======
+      print('hello là dữ liệu ở firebase: '+ result.user.toString());
+      var createResult = await _accountService.createAccount(
+            {
+              "roleId": '2',
+              "email": result.user!.email!,
+              "fullname": result.user!.displayName!,
+              // "phone": (result.user!.phoneNumber!.isEmpty) ? 'null' : result.user!.phoneNumber! ,
+              "phone": 'null',
+              "isDeleted": 'false',
+              "avatarUrl": result.user!.photoURL.toString(),
+              "createDate": applyDate.toString(),
+              "modifyDate": applyDate.toString(),
+            });
+
+      if(createResult != null){
+        sharedStates.account = createResult;
+        BotToast.showText(text: "Đăng nhập thành công");
+>>>>>>> vanlt
         Get.toNamed(Routes.home);
       }
     } catch (e) {
@@ -47,35 +73,4 @@ class LoginEmailController extends GetxController {
     }
     BotToast.closeAllLoading();
   }
-
-  void checkLoginWithPhoneAndPass(String phone, String pass) {
-    try {
-      BotToast.showLoading();
-      if (phone.isNotEmpty && pass.isNotEmpty) {
-        // lưu DB and User here
-
-        BotToast.showText(
-            text: "Đăng nhập thành công",
-            textStyle: TextStyle(fontSize: 16),
-            duration: const Duration(seconds: 5));
-        Get.toNamed(Routes.home);
-      } else {
-        BotToast.showText(
-            text: "Required Information!",
-            textStyle: TextStyle(fontSize: 16),
-            duration: const Duration(seconds: 7));
-      }
-    } catch (e) {
-      log("Lỗi: " + e.toString());
-      BotToast.showText(text: "Your phone or password wrong ! Login In Failed");
-    }
-    BotToast.closeAllLoading();
-  }
-
-  // Future<void> logOut() async {
-  //   await FirebaseAuth.instance.signOut();
-  //   await _googleSignIn!.signOut();
-  //   BotToast.showText(text: "Logout Successfully");
-  //   Get.toNamed(Routes.login);
-  // }
 }

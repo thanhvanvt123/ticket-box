@@ -3,21 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:ticket_box/src/common/themes.dart';
 import 'package:ticket_box/src/models/account.dart';
 import 'package:ticket_box/src/pages/profile/controllers/profile_controller.dart';
 import 'package:ticket_box/src/routes/routes.dart';
 import 'package:ticket_box/src/services/global_states/shared_states.dart';
 import 'package:ticket_box/src/widgets/custom_bottom_bar.dart';
 
-
 class ProfilePage extends GetView<ProfileController> {
   final SharedStates sharedData = Get.find();
-  final user = FirebaseAuth.instance.currentUser!;
+  // final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     final Account? userInfo = sharedData.account;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: dark_background,
       body: Column(
         children: <Widget>[
           SizedBox(height: 10.0 * 5),
@@ -29,10 +29,12 @@ class ProfilePage extends GetView<ProfileController> {
                 margin: EdgeInsets.only(top: 10.0 * 3),
                 child: Stack(
                   children: <Widget>[
-                    CircleAvatar(radius: 10.0 * 5,
-                        backgroundImage: (user.isNull)
-                            ? NetworkImage('https://pngimg.com/uploads/mouth_smile/mouth_smile_PNG42.png')
-                            : NetworkImage(user.photoURL!)),
+                    CircleAvatar(
+                        radius: 10.0 * 5,
+                        backgroundImage: (userInfo.isNull)
+                            ? NetworkImage(
+                                'https://pngimg.com/uploads/mouth_smile/mouth_smile_PNG42.png')
+                            : NetworkImage(userInfo!.avatarUrl!)),
                     GestureDetector(
                       onTap: () {
                         Get.toNamed(Routes.profileDetail);
@@ -62,7 +64,7 @@ class ProfilePage extends GetView<ProfileController> {
                 ),
               ),
               SizedBox(height: 20),
-              Text( (user.isNull)? 'Username loading' : user.displayName!,
+              Text((userInfo.isNull) ? 'Username loading' : userInfo!.fullName!,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
@@ -93,7 +95,7 @@ class ProfilePage extends GetView<ProfileController> {
                   Icon(
                     Icons.account_circle,
                     size: 25,
-                    color: Color(0xff28BEBA),
+                    color: accent_green,
                   ),
                   SizedBox(width: 15),
                   Text('My account',
@@ -105,6 +107,7 @@ class ProfilePage extends GetView<ProfileController> {
                   Icon(
                     Icons.arrow_forward,
                     size: 25,
+                    color: secondary_color,
                   ),
                 ],
               ),
@@ -113,8 +116,7 @@ class ProfilePage extends GetView<ProfileController> {
           GestureDetector(
             child: Container(
               height: 55,
-              margin:
-              EdgeInsets.symmetric(horizontal: 30).copyWith(bottom: 20),
+              margin: EdgeInsets.symmetric(horizontal: 30).copyWith(bottom: 20),
               padding: EdgeInsets.symmetric(
                 horizontal: 20,
               ),
@@ -124,7 +126,7 @@ class ProfilePage extends GetView<ProfileController> {
               ),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.help, size: 25, color: Color(0xff28BEBA)),
+                  Icon(Icons.help, size: 25, color: accent_green),
                   SizedBox(width: 15),
                   Text('Help and support',
                       style: TextStyle(
@@ -135,6 +137,7 @@ class ProfilePage extends GetView<ProfileController> {
                   Icon(
                     Icons.arrow_forward,
                     size: 25,
+                    color: secondary_color,
                   ),
                 ],
               ),
@@ -157,7 +160,7 @@ class ProfilePage extends GetView<ProfileController> {
               ),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.policy, size: 25, color: Color(0xff28BEBA)),
+                  Icon(Icons.policy, size: 25, color: accent_green),
                   SizedBox(width: 15),
                   Text('Terms & Policy',
                       style: TextStyle(
@@ -167,6 +170,7 @@ class ProfilePage extends GetView<ProfileController> {
                   Spacer(),
                   Icon(
                     Icons.arrow_forward,
+                    color: secondary_color,
                     size: 25,
                   ),
                 ],
@@ -194,7 +198,7 @@ class ProfilePage extends GetView<ProfileController> {
               ),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.logout, size: 25, color: Color(0xff28BEBA)),
+                  Icon(Icons.logout, size: 25, color: accent_green),
                   SizedBox(width: 15),
                   Text('Logout',
                       style: TextStyle(
@@ -204,6 +208,7 @@ class ProfilePage extends GetView<ProfileController> {
                   Spacer(),
                   Icon(
                     Icons.arrow_forward,
+                    color: secondary_color,
                     size: 25,
                   ),
                 ],

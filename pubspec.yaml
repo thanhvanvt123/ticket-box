@@ -36,7 +36,11 @@ dependencies:
   firebase_auth: ^3.0.1
   firebase_core: ^1.4.0
   pin_code_fields: ^7.3.0
-
+  firebase_storage: ^10.0.6
+  ticket_material: ^0.3.1
+  numberpicker: ^2.1.1
+  solid_bottom_sheet: ^0.1.10
+  pretty_qr_code: ^2.0.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -48,10 +52,15 @@ dev_dependencies:
   hive_generator: ^1.1.0
   #Signin button
   flutter_signin_button: ^2.0.0
+<<<<<<< HEAD
   #process bar
   getwidget:
   #stream listener -> fix bad state bug
   rxdart:
+=======
+  rxdart:
+  getwidget:
+>>>>>>> vanlt
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

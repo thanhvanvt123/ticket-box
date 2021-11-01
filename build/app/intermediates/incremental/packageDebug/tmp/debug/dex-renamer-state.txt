@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Mon Oct 25 02:42:53 ICT 2021
+=======
+#Mon Nov 01 14:55:06 ICT 2021
+>>>>>>> vanlt
 base.1=E\:\\srcPRM\\ticket-box\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
 path.1=classes2.dex
 base.0=E\:\\srcPRM\\ticket-box\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex

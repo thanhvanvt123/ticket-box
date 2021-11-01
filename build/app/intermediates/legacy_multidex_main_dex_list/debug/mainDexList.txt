@@ -771,6 +771,7 @@ com/google/firebase/auth/PhoneMultiFactorInfo.class
 com/google/firebase/auth/internal/zzp.class
 com/google/firebase/platforminfo/AutoValue_LibraryVersion.class
 com/google/firebase/platforminfo/LibraryVersion.class
+com/google/firebase/storage/StorageException$ErrorCode.class
 io/flutter/FlutterInjector.class
 io/flutter/app/FlutterApplication.class
 io/flutter/embedding/engine/loader/FlutterLoader.class

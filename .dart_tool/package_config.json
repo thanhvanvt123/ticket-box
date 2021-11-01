@@ -183,7 +183,11 @@
     },
     {
       "name": "firebase_core",
+<<<<<<< HEAD
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.7.0",
+=======
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.8.0",
+>>>>>>> vanlt
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -196,6 +200,27 @@
     {
       "name": "firebase_core_web",
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.1.0",
+<<<<<<< HEAD
+=======
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "firebase_storage",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-10.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "firebase_storage_platform_interface",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage_platform_interface-4.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "firebase_storage_web",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage_web-3.0.4",
+>>>>>>> vanlt
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -328,6 +353,15 @@
     {
       "name": "image_picker_platform_interface",
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_platform_interface-2.4.1",
+<<<<<<< HEAD
+=======
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "infinite_listview",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/infinite_listview-1.1.0",
+>>>>>>> vanlt
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -382,6 +416,15 @@
     {
       "name": "mime",
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/mime-1.0.0",
+<<<<<<< HEAD
+=======
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "numberpicker",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/numberpicker-2.1.1",
+>>>>>>> vanlt
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -418,6 +461,15 @@
     {
       "name": "pool",
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pool-1.5.0",
+<<<<<<< HEAD
+=======
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pretty_qr_code",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pretty_qr_code-2.0.2",
+>>>>>>> vanlt
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -430,6 +482,15 @@
     {
       "name": "pubspec_parse",
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pubspec_parse-1.1.0",
+<<<<<<< HEAD
+=======
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "qr",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/qr-2.1.0",
+>>>>>>> vanlt
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -472,6 +533,15 @@
     {
       "name": "sky_engine",
       "rootUri": "file:///D:/Flutter/flutter/bin/cache/pkg/sky_engine",
+<<<<<<< HEAD
+=======
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "solid_bottom_sheet",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/solid_bottom_sheet-0.1.10",
+>>>>>>> vanlt
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -526,6 +596,15 @@
     {
       "name": "test_api",
       "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.3",
+<<<<<<< HEAD
+=======
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "ticket_material",
+      "rootUri": "file:///D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/ticket_material-0.3.1",
+>>>>>>> vanlt
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -572,7 +651,11 @@
       "languageVersion": "2.12"
     }
   ],
+<<<<<<< HEAD
   "generated": "2021-10-24T19:48:57.677270Z",
+=======
+  "generated": "2021-11-01T08:08:10.254174Z",
+>>>>>>> vanlt
   "generator": "pub",
   "generatorVersion": "2.15.0-172.0.dev"
 }
